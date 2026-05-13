@@ -1,13 +1,13 @@
 # Contributing
 
-RustUse/use-rust is intentionally small at the API level even though it is now a multi-crate workspace. Contributions should keep the public Rust primitives explicit, typed, and pragmatic.
+RustUse/use-measure is intentionally small and focused. Contributions should keep the public API explicit, typed, and pragmatic.
 
 ## Development flow
 
 1. Make the smallest useful change.
 2. Add or update tests for public behavior changes.
 3. Prefer direct helpers over broad framework abstractions.
-4. Keep public docs aligned with the actual local Cargo, crate, version, and release-reporting behavior.
+4. Keep public docs aligned with the actual crate behavior, metadata, and release surface.
 
 ## Local validation
 
@@ -20,7 +20,7 @@ cargo test --workspace --all-features
 
 ## Scope guidance
 
-- `use-rust` is the RustUse Rust ecosystem primitives set, not a CLI and not a general DevOps automation layer.
-- Prefer reusable typed primitives over shell-oriented workflows.
-- Avoid network calls and avoid real publish operations in library code.
-- Keep release checks reporting-oriented and easy to test with temporary fixture directories.
+- `use-measure` is the RustUse measurement primitives crate, not a CLI and not a general automation layer.
+- Prefer reusable typed primitives over framework-heavy wrappers.
+- Keep examples and README usage aligned with the current crate surface.
+- Avoid widening the API surface without a clear crate-level use case.
